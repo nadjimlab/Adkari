@@ -1,0 +1,96 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Golden Mihrab Arch Background -->
+    <path
+        android:pathData="M54,22 C48,22 43,26 40,30 L40,64 L68,64 L68,30 C65,26 60,22 54,22 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="40"
+                android:startY="22"
+                android:endX="68"
+                android:endY="64"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#0D4B39" />
+                <item android:offset="1.0" android:color="#06291F" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Golden Arch Outer Border -->
+    <path
+        android:pathData="M54,20 C47,20 41,25 38,30 L38,66 L70,66 L70,30 C67,25 61,20 54,20 Z"
+        android:strokeWidth="2"
+        android:fillColor="#00000000">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="38"
+                android:startY="20"
+                android:endX="70"
+                android:endY="66"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFF1C2" />
+                <item android:offset="0.5" android:color="#E5C158" />
+                <item android:offset="1.0" android:color="#B88A22" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Mosque Minarets Silhouette inside arch -->
+    <path
+        android:pathData="M44,48 L44,58 L46,58 L46,48 Z M62,48 L62,58 L64,58 L64,48 Z M45,46 L45,48 Z M63,46 L63,48 Z"
+        android:fillColor="#0A3E2F" />
+
+    <!-- Mosque Dome Silhouette inside arch -->
+    <path
+        android:pathData="M48,58 C48,51 60,51 60,58 Z"
+        android:fillColor="#0A3E2F" />
+
+    <!-- Glowing Crescent Moon in Arch -->
+    <path
+        android:pathData="M54,28 C51.5,28 49.5,30 49.5,32.5 C49.5,35 51.5,37 54,37 C55.3,37 56.5,36.4 57.3,35.5 C55.2,35.3 53.6,33.6 53.6,31.6 C53.6,30.3 54.3,29.1 55.4,28.4 C55,28.1 54.5,28 54,28 Z"
+        android:fillColor="#FFF2B8" />
+
+    <!-- Open Holy Quran (Book) Base and Spine -->
+    <path
+        android:pathData="M54,58 L37,64 L39,76 L54,71 L69,76 L71,64 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="37"
+                android:startY="58"
+                android:endX="71"
+                android:endY="76"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#E6BA4A" />
+                <item android:offset="0.5" android:color="#F7DE8B" />
+                <item android:offset="1.0" android:color="#C89727" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Open Quran Glowing Left Page -->
+    <path
+        android:pathData="M53.5,60 C48,60.5 42,62.5 39,65 L41,74 C44,72 49,70.5 53.5,70 Z"
+        android:fillColor="#FFFDF7" />
+
+    <!-- Open Quran Glowing Right Page -->
+    <path
+        android:pathData="M54.5,60 C60,60.5 66,62.5 69,65 L67,74 C64,72 59,70.5 54.5,70 Z"
+        android:fillColor="#FFF8E8" />
+
+    <!-- Golden Quran Page Edges / Bookmark -->
+    <path
+        android:pathData="M53,60 L55,60 L55,73 L54,75 L53,73 Z"
+        android:fillColor="#D8A02A" />
+
+    <!-- Golden Base Florish Accent -->
+    <path
+        android:pathData="M44,81 C48,80 52,82 54,84 C56,82 60,80 64,81 C60,82.5 56,83 54,85 C52,83 48,82.5 44,81 Z"
+        android:fillColor="#E5C158" />
+</vector>
+
+
