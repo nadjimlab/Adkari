@@ -28,27 +28,11 @@ jobs:
         with:
           gradle-version: '9.3.1'
 
-      - name: Grant execute permission for gradlew
-        run: |
-          if [ -f gradlew ]; then
-            chmod +x gradlew
-          fi
-
       - name: Run Unit Tests
-        run: |
-          if [ -f gradlew ]; then
-            ./gradlew testDebugUnitTest --no-daemon
-          else
-            gradle testDebugUnitTest --no-daemon
-          fi
+        run: gradle testDebugUnitTest --no-daemon
 
       - name: Build Debug APK
-        run: |
-          if [ -f gradlew ]; then
-            ./gradlew assembleDebug --stacktrace --no-daemon
-          else
-            gradle assembleDebug --stacktrace --no-daemon
-          fi
+        run: gradle assembleDebug --stacktrace --no-daemon
 
       - name: Upload Debug APK
         uses: actions/upload-artifact@v4
