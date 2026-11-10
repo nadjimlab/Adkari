@@ -18,32 +18,24 @@ import androidx.navigation.compose.rememberNavController
 import com.example.ui.navigation.AppNavigation
 import com.example.ui.theme.AdhkariTheme
 import com.example.ui.viewmodel.AdhkariViewModel
+import com.example.ui.viewmodel.ThabatViewModel
 
 class MainActivity : ComponentActivity() {
-
     private val viewModel: AdhkariViewModel by viewModels()
+    private val thabatViewModel: ThabatViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
         setContent {
             val settings by viewModel.settings.collectAsState()
-            val isDark = settings.isDarkMode ?: isSystemInDarkTheme()
-
-            AdhkariTheme(darkTheme = isDark) {
-                // Ensure natural Arabic RTL reading order across all composables
+            AdhkariTheme(darkTheme = settings.isDarkMode ?: isSystemInDarkTheme()) {
                 CompositionLocalProvider(LocalLayoutDirection provides LayoutDirection.Rtl) {
-                    val navController = rememberNavController()
-                    Surface(modifier = Modifier.fillMaxSize()) {
-                        AppNavigation(
-                            navController = navController,
-                            viewModel = viewModel
-                        )
+                    Surface(Modifier.fillMaxSize()) {
+                        AppNavigation(rememberNavController(), viewModel, thabatViewModel)
                     }
                 }
             }
         }
     }
 }
-
